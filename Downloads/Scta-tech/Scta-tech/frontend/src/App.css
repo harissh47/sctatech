@@ -1,0 +1,137 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 1px;
+  background: linear-gradient(to right, #8A2BE2, #4169E1);
+}
+
+.gradient-border > div {
+  background: #121233;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.pulse {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+/* Animation for AI data nodes */
+@keyframes pulse-glow {
+  0% { 
+    opacity: 0.3; 
+    box-shadow: 0 0 5px rgba(138, 43, 226, 0.3);
+  }
+  50% { 
+    opacity: 0.7; 
+    box-shadow: 0 0 15px rgba(65, 105, 225, 0.5);
+  }
+  100% { 
+    opacity: 0.3; 
+    box-shadow: 0 0 5px rgba(138, 43, 226, 0.3);
+  }
+}
+
+@keyframes cloud-drift {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateX(20px) translateY(-10px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+    opacity: 0.3;
+  }
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.glass-card {
+  background: rgba(18, 18, 51, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #121233 0%, #1e1e4b 100%);
+  position: relative;
+}
+
+.gradient-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(138, 43, 226, 0.3), transparent 40%),
+              radial-gradient(circle at 0% 100%, rgba(65, 105, 225, 0.2), transparent 40%);
+  z-index: -1;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+/* CSS for hero animations */
+.hero-animate {
+  transition: all 0.5s ease-out;
+}
