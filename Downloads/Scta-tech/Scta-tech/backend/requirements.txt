@@ -1,7 +1,0 @@
-Flask
-psycopg2-binary
-python-dotenv
-flask_sqlalchemy
-Flask-Migrate
-pandas
-openpyxl
